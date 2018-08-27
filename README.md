@@ -7,3 +7,9 @@ This needs to run as a server in order to deal with CORs issues. You can run `ba
 See full list of emojis at [unicode.org](https://unicode.org/emoji/charts/full-emoji-list.html).
 
 See live (partial) example on [CodePen](https://codepen.io/mrcoles/pen/zJqQZO).
+
+---
+
+example screenshot:
+
+![emoji generator screenshot](./screenshots/emoji-generator.png)
