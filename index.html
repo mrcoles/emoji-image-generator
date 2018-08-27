@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <title>Emoji Image Generator</title>
+  <style>
+    body {
+      font: normal 14px/20px Helvetica Neue, Helvetica, Arial, sans-serif;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .left { float: left; }
+    #form { overflow: hidden; }
+    #form .left { margin-right: 15px; }
+    #result { margin-bottom: 1em; }
+    #result a { margin-right: 15px; }
+    .row span { margin-right: 15px; }
+    .row .name { display: inline-block; width: 220px; text-align: right; }
+    .row .emoji { display: inline-block; font-family: none; } /* helvetica/arial/etc. fail for more complex emoji */
+    .row .small { font-size: 20px; width: 20px; }
+    .row .medium { font-size: 40px; width: 40px; }
+    .row .large { font-size: 80px; width: 80px; }
+  </style>
+  <body>
+    <h1>Emoji Image Generator</h1>
+    <p>
+      Choose an image size and then hit submit. Image (PNG) versions of the emojis
+      below will be generated and combined into a zip file that will appear
+      as a link just below the form once it completes.
+    </p>
+    <form id="form">
+      <p class="left">
+        <label for="font-size">Image size:</label>
+        <input id="font-size" type="number" value="100" />
+      </p>
+      <p class="left">
+        <button id="button" type="submit">Generate Emojis Zip</button>
+      </p>
+      <p class="left" id="progress"></p>
+    </form>
+    <div id="result"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
