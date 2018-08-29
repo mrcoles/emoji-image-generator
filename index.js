@@ -24,7 +24,6 @@ const makeEmojis = emojis => {
     row.appendChild(nameElt);
 
     let text = _asText(code);
-    console.log(text); //REM
 
     // ["small", "medium", "large"]
     ["small"].forEach(size => {
@@ -158,7 +157,6 @@ const _emojisAsBlobIterator = size => {
 
 const _asText = code => {
   let nums = code.split("_").map(_hexStringToNumber);
-  console.log("nums", nums); //REM
   return String.fromCodePoint.apply(String, nums);
 };
 
